@@ -21,4 +21,24 @@ dead = False
 print("Hi my name is ",my_name)
 print("and I'm",age, "years old")
 
+# function
+# def name(): 
+# 파이썬은 {}없어서 함수 안에 실행문은 들여쓰기(tab) 해야 함수안에 포함됨
+# 공백에 민감한 언어
+
+def say_hello(name,age):
+    print("hello", name, "how r u ?")
+    print("your are", age, "years old")
+
+say_hello("lenn",15)
+
+def tax_calculator(salary):
+    print(salary * 0.35)
+
+tax_calculator(3500000)
+tax_calculator(350)
+
+
+
+
 
