@@ -187,4 +187,44 @@ print(player)
 player['fav_food'].append("noodles")
 print(player["fav_food"])
 
-# Recap
+
+from requests import get
+# for loop
+# URL Formatting
+websites = (
+    "facebook.com",
+    "tiktock.com",
+    "https://airbnb.com",
+    "google.com",
+    # "https://twitter.com"
+)
+# for website in websites:
+#     if website.startswith("https://"):
+#         print(website)
+#     else:
+#         print("https://",website)
+
+# Requests
+# python standard library
+# https://docs.python.org/3/library/index.html
+# pypi - other python libraries that is not included in standard libraray
+# https://pypi.org/search/ 
+# requests 는 python 코드에서 웹사이트로 request 를 보낼 수 있게 해줌
+# https://pypi.org/project/requests/
+# 터미널명령어 pip3 install requests
+# if not
+result = {}
+
+for website in websites:
+    if not website.startswith("https://"):
+        website = f"https://{website}"
+    response = get(website)
+    # print(response.status_code)
+    # response 결과값 확인: 아래 사이트
+    # https://developer.mozilla.org/ko/docs/Web/HTTP/Status
+    if response.status_code == 200:
+        result[website] = "OK"
+    else:
+        result[website] = "FAILED"
+
+print(result)
