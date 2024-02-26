@@ -34,3 +34,16 @@ for id in movie_ids:
     print(data['vote_average'])
     print(data['overview'])
 
+
+# 정답코드
+# def get_movie(id):
+#     response = requests.get(
+#         f"https://nomad-movies.nomadcoders.workers.dev/movies/{id}")
+#     data = response.json()
+#     return data
+
+
+# for id in movie_ids:
+#     movie = get_movie(id)
+#     print(f"Title:{movie['title']}\nOverview:{
+#           movie['overview']}\nVote Average:{movie['vote_average']}\n============")
