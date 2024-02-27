@@ -67,3 +67,4 @@ team_x.remove_player(lenn)
 team_x.show_players()
 
 team_x.total_xp()
+
