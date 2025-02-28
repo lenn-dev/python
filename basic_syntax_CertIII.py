@@ -228,6 +228,8 @@
 
 
 
+# session 4
+
 # Exercise session3
 # while/For Loops==================================================
 #Complete the following programming exercises.  
@@ -379,3 +381,92 @@
 # print(f"odd number count: {odd}")
 # print(f"odd number count: {even}")
 
+#EXERCISE 6=========================================
+# 1. Write a program to demonstrate to get index and value of the element from the list.
+
+# Here is a sample list you can use:
+
+myList = ["first", "second", "third", "fourth", "fifth"]
+
+# get (and print) the value of the second element from list.
+# Note subscripts are ZERO-based:
+# Your answer:
+#print(myList[1])
+
+
+# Now, get (and print) the index of the element with value "fourth":
+# Your answer:
+#print(myList[3])
+
+# 2. Using iteration fin the list, print a Happy New Year message to 
+#    all the members in the list Friends:
+
+# Here is the list:
+
+friends = ["John", "Frank", "Gitty", "Oliver"]
+
+# Your answer: (print a Happy New Year message to all the friends
+
+#for n in friends:
+#    print(f"{n},Happy New Year ")
+
+# Now, add Sam and Garry to the list, after John and before Frank, 
+# then print the extended list
+
+# Your answer:
+
+# friends.insert(1,"Sam")
+# print(friends)
+# friends.insert(2,"Garry")
+# print(friends)
+
+# 3. Write a program to calculate the average of items in the list.
+#    Hint:Use len() and sum() functions.
+#    You can use this list or change it to your own values:
+
+a = [5, 6, 4, 7, 2, 9, 10, 5, 6, 7, 101, 11, 51, 9]
+
+# Your answer:
+# avg = sum(a)/len(a)
+# print(avg)
+
+# 4. From the following list of numbers, write a script to 
+#    remove the duplicates values.
+
+original = [5, 6, 4, 7, 2, 9, 10, 5, 6, 7, 101, 11, 51, 9]
+
+# Your answer:
+# unique = []
+# for item in original:
+#     duplicate = False
+#     for uniq_item in unique:
+#         if uniq_item == item:
+#             duplicate = True
+#             break   
+#     if duplicate == False:   #  not duplicate  OK
+#         unique.append(item)
+# print(unique)
+
+unique=[]
+for item in original:
+    if item not in unique:
+        unique.append(item)
+print("list with duplication removed")
+print(unique)
+
+
+# seaching 
+states = ["QLD", "NSW", "ACT", "VIC", "TAS", "SA", "WA", "NY"]
+
+# found = False
+# the_state = input("Enter a state: ")
+
+# for x in states:
+#     if x == the_state:
+#         found = True
+#         break
+
+# if found == False:
+#     print("Not a valid state")
+# else: 
+#     print("Valid state entered")
