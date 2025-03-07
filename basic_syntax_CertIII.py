@@ -447,12 +447,12 @@ original = [5, 6, 4, 7, 2, 9, 10, 5, 6, 7, 101, 11, 51, 9]
 #         unique.append(item)
 # print(unique)
 
-unique=[]
-for item in original:
-    if item not in unique:
-        unique.append(item)
-print("list with duplication removed")
-print(unique)
+# unique=[]
+# for item in original:
+#     if item not in unique:
+#         unique.append(item)
+# print("list with duplication removed")
+# print(unique)
 
 
 # seaching 
@@ -470,3 +470,153 @@ states = ["QLD", "NSW", "ACT", "VIC", "TAS", "SA", "WA", "NY"]
 #     print("Not a valid state")
 # else: 
 #     print("Valid state entered")
+
+
+#session5 function=====================================
+
+# def evenOdd(x): 
+#     if(x % 2==0):
+#         print("even")
+#     else:
+#         print("odd")
+
+# evenOdd(2)
+# evenOdd(3)
+
+# def add(num1, num2):
+#     sum = num1 + num2
+#     print("The sum is",sum)
+
+# add(1,2)
+
+#default parameter
+# def my_function(country="Norway"):
+#     print("I am from "+ country)
+
+# my_function("Australia")
+# my_function()
+
+# def add(num1,num2):
+#     sum = num1+num2
+#     return sum
+
+# print("The sum is", add(7,8))
+
+# def print_something():
+#     something = input("enter the string")
+#     print(something)
+
+# print_something()
+
+
+# num =int(input("Enter the number"))
+# print(type(num))
+
+# math module
+# import math
+# #find the square root of a number
+# number=25
+# result = math.sqrt(number)
+# print(result)
+
+# import math
+# x=math.pi
+# print(x)
+
+# random module
+# randomint
+# import random
+# x = random.randint(1,10)
+# print(x)
+
+# random choice
+# import random
+# #Generate a random integer between 1 and 100
+# random_number = random.randint(1,100)
+# print("Random number between 1 and 100:", random_number)
+# #Choose a random item from a list of colors
+# colors = ['red', 'green', 'blue', 'yellow', 'purple']
+# random_color = random.choice(colors)
+# print("Random color from the list", random_color)
+
+
+
+#================================================
+# Exercise Algorithms and Flowcharts
+# compare 3 numbers and return biggest number 
+
+# def biggest(a,b,c):
+#     if a > b:
+#         if a > c:
+#             print(f"The biggest number is {a}")
+#         else: 
+#             print(f"The smallest number is {b}")
+#     else:
+#         if b < c:
+#             print(f"The biggest number is {c}")
+#         else:
+#             print(f"The biggest number is {b}")
+
+# print("Find the biggest number in 3 numbers")
+# num1 = int(input("Please enter first number: "))
+# num2 = int(input("Please enter second number: "))
+# num3 = int(input("Please enter third number: "))
+
+# print("The biggest number is ", biggest(num1,num2,num3))
+
+
+
+#1.
+# num = int(input("Enter the number"))
+# if(num % 2==0):
+#     print("even")
+# else:
+#     print("odd")
+
+
+#2.
+# def choose(x): 
+#     if(x == "sunny"):
+#         print("wear a short pants")
+#     elif(x =="rainny"):
+#         print("wear a rain coat")
+#     elif(x =="cold"):
+#         print("wear a jacket")   
+
+# weather =input("Today is sunny or rainny, cold? ")
+
+# choose(weather)
+
+# 3.
+# def evenOdd(x): 
+#     if(x % 2==0):
+#         print("even")
+#     else:
+#         print("odd")
+
+# num = int(input("Enter the number"))
+# evenOdd(num)
+
+# 4. 
+# def print_something():
+#     something = input("enter the string")
+#     print(something)
+
+# print_something()
+
+# 5. 
+# def greeting():
+#     name = input("enter your name")
+#     print(f"Hello",name)
+
+# greeting()
+
+#6.
+# def evenOdd(x): 
+#     if(x % 2==0):
+#         print("even")
+#     else:
+#         print("odd")
+
+# num = int(input("Enter the number"))
+# evenOdd(num)
