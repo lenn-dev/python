@@ -727,8 +727,8 @@ fruit = 'banananana'
 # print(aa)
 
 #seach and replace
-greet ="Hello Bob"
-newstr = greet.replace('Bob','Jane')
-print(newstr)
-newstr = greet.replace('o','x')
-print(newstr)
+# greet ="Hello Bob"
+# newstr = greet.replace('Bob','Jane')
+# print(newstr)
+# newstr = greet.replace('o','x')
+# print(newstr)
