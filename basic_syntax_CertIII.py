@@ -620,3 +620,115 @@ states = ["QLD", "NSW", "ACT", "VIC", "TAS", "SA", "WA", "NY"]
 
 # num = int(input("Enter the number"))
 # evenOdd(num)
+
+
+#session6===========================
+# file handling
+
+#read file
+# my_file = open("example.txt",'r')
+# #content = my_file.read()
+# #content = my_file.read(4)
+# #content = my_file.readline() #list format
+# content = my_file.readlines()
+# print(content)
+# my_file.close()
+
+
+# with open("example.txt") as my_file:
+#     content = my_file.read()
+#     print(content)
+
+
+
+# write in to file
+# use writhe mode "w" - overwrite 
+# my_file = open("example.txt","w")
+# my_file.write("This is a test file1 \n")
+# my_file.write("This is a test file2 \n")
+# my_file.write("This is a test file3 \n")
+# my_file.close()
+
+# should open file with write mode first and store in the object
+# and using the object, write the lines
+# with open("example.txt","w") as file:
+#     lines = ["line one\n","line two\n","line three\n"]
+#     file.writelines(lines)
+
+
+# append method 
+# when write something in an existing txt file
+# then remove previous content in txt file and overwrite the string
+# if you don't want to remove it and add content
+# use append method "a"
+# with open("example.txt","a") as file:
+#     file.write("This is the new line")
+
+# looping over a file object
+# f = open("example.txt","r")
+# for line in f:
+#     print(line)
+# f.close()
+
+# String=================
+# str3= "123"
+# str3 = int(str3) + 1 
+# print(str3)
+
+#indexing
+fruit = 'banana'
+# letter = fruit[1]
+# print(letter)
+# n = 3
+# letter2 = fruit[n-1]
+# print(letter2)
+
+# Access a character in string
+# replace
+# s1="Hello Bob"
+# print(s1)
+# s2=s1.replace("Bob","Robert")
+# print(s2)
+
+# slicing
+# message ='python is awesome'
+# print (message[0:5])
+# print (message[7:10])
+# print (message[10:17])
+# print (message[:])
+# print (message[5:])
+# print (message[:6])
+
+# message[0] = 'J' 
+# Error: str object does not support item assignment
+
+#read string using loop
+fruit = 'banananana'
+# for i in range(len(fruit)):
+#     print(fruit[i])
+#     # print(fruit[i],end=".")
+
+# for c in fruit:
+#     print(c,end=",")
+
+# String Library
+# upper/lower letter
+# greet="Hello Bob"
+# lower = greet.lower()
+# print(lower)
+# upper = greet.upper()
+# print(upper)
+
+#serching string : find()
+# fruit = "banana"
+# pos = fruit.find('na') #return first position of string
+# print(pos)
+# aa = fruit.find('z') # if cannot find the string then return -1
+# print(aa)
+
+#seach and replace
+greet ="Hello Bob"
+newstr = greet.replace('Bob','Jane')
+print(newstr)
+newstr = greet.replace('o','x')
+print(newstr)
