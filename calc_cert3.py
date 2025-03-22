@@ -28,8 +28,6 @@ while True:
         num2 = int(num2_input)
 
         oper = input("Choose an operator (+, -, *, /, ** for power) or type 'exit' to quit: ").strip()
-
-        
         if oper.lower() == "exit":
             print("Exiting calculator...")
             break
@@ -59,19 +57,21 @@ while True:
 
         # 2. Use Data Types, Operators, and Expressions: Format the result as a string with two decimal places.
         result_str = f"{num1} {oper} {num2} = {result:.2f}"
+        print(result_str)
 
-        # Fun String Manipulation: Replace certain words to make it playful
+        # 10. Perform String Manipulation
         # Print the modified result with '=>'
         fun_result = result_str.replace("=", "=>")
-        
+        print(f"{fun_result} (changed from '=' to '=>')")
+
+        # 10. Perform String Manipulation
         # Slicing: only print result part
         print(f"result is :{result_str[7:]} ")
-        print(fun_result)  
-
+         
 
         # 8. Use Array Data Structures: Store the result in the 'history' list.
         history.append(result_str)
-        print(result_str)
+        print(history)
 
         # 9. Perform File Handling: Open the file in append mode 
         # and Save the formatted result to the file.
