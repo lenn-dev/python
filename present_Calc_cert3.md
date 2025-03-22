@@ -6,10 +6,10 @@ Today, I’ll walk you through a calculator program, explaining how each line of
 
 >> Here's how this program works
 >>  1. The user enters two numbers and selects an operator (`+`, `-`, `*`, `/`, `**`).
->>  2. The program checks if the inputs are valid and then performs the selected operation.  
->> 3. The result is displayed on the screen, with some string manipulation for formatting.  
->> 4. The calculation result is stored in the `history` list and written to the `calc_history.txt` file.  
->> 5. If the user types `"exit"`, the program terminates.
+>>  2. The program checks if the inputs are valid and then performs the selected operation.
+>>  3. The result is displayed on the screen, with some string manipulation for formatting.
+>>  4. The calculation result is stored in the `history` list and written to the `calc_history.txt` file.
+>>  5. If the user types `"exit"`, the program terminates.
 
 
 ---
