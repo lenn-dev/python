@@ -1,135 +1,205 @@
-Sure! Here's a more conversational and approachable explanation, breaking down how each line of code meets the requirements:
+### **Presentation Script**  
+
+**Hello everyone,**  
+
+Today, I’ll walk you through a calculator program, explaining how each line of code meets key programming requirements. Let’s go step by step.  
+
+>> Here's how this program works
+>> 1. The user enters two numbers and selects an operator (`+`, `-`, `*`, `/`, `**`).
+>>  2. The program checks if the inputs are valid and then performs the selected operation.
+>>  3. The result is displayed on the screen, with some string manipulation for formatting.
+>>  4. The calculation result is stored in the `history` list and written to the `calc_history.txt` file.
+>>  5. If the user types `"exit"`, the program terminates.
+
 
 ---
 
-### **Step-by-Step Explanation of the Code**
+### 1. **Basic Language Syntax Rules**
+ 
+- Generally, I’ve properly declared the variables `num1`, `num2`, and `oper`. I used the correct syntax and made sure the variables are clear and descriptive. The input is also converted to integers using `int()`, which is good practice for number input. I’ve used indentation correctly, and everything is case-sensitive as expected in Python.
 
-1. **Basic Language Syntax Rules**
-   - **Code**: 
-     ```python
-     num1 = int(input("Choose a number: "))
-     num2 = int(input("Choose another number: "))
-     oper = input("Choose an operator (+, -, *, /) or 'exit' to finish: ")
-     ```
-     - Here, I’ve properly declared the variables `num1`, `num2`, and `oper`. I used the correct syntax and made sure the variables are clear and descriptive. The input is also converted to integers using `int()`, which is good practice for number input. I’ve used indentation correctly, and everything is case-sensitive as expected in Python.
+---
+### 2. Importing the math library
+```python
+import math
+```
+- First, I import the **math library**.  
+- This allows us to use built-in mathematical functions, like `math.pow()`, to perform exponentiation. Although this program only supports basic operations and exponentiation, you can use this math library to perform square roots, rounding up, down, truncated values, factorials, trigonometric functions, and logarithmic calculations.
+- This satisfies **Requirement 4: Use Program Library Functions**.  
 
 ---
 
-2. **Data Types, Operators, and Expressions**
-   - **Code**:
-     ```python
-     if oper == "+":
-         print(num1 + num2)
-     elif oper == "-":
-         print(num1 - num2)
-     elif oper == "*":
-         print(num1 * num2)
-     elif oper == "/":
-         print(num1 / num2)
-     ```
-     - Here, I’m working with numbers and using basic operators like `+`, `-`, `*`, and `/`. Each operator corresponds to a simple expression (like `num1 + num2`) to calculate the result, which is then printed out. This meets the requirement for using operators and expressions.
+### 3. Creating a history list to store past calculations
+```python
+history = []
+```
+- Here, we **initialize an empty list called `history`**.  
+- This will store previous calculations so it can be retrieved later if needed.  
+- Since lists (or arrays) allow us to store multiple values, this fulfills **Requirement 8: Use Array Data Structures**.  
 
 ---
 
-3. **Variables and Variable Scope**
-   - **Code**:
-     ```python
-     history = []
-     ```
-     - The `history` list is declared outside the loop, meaning it’s accessible throughout the program. It stores the past calculations, and it’s a great way to manage data. The variables like `num1`, `num2`, and `oper` are used within the correct scope and are reused within the loop.
+### **4. Starting an infinite loop to run the calculator continuously**  
+```python
+while True:
+```
+- We enter a **while loop** to keep the calculator running until the user decides to exit.  
+- This satisfies **Requirement 7: Use Loop Structures to Code Logic and Algorithms**.  
+---
+
+#### **4. Handling user input with exception handling**  
+```python
+try:
+```
+- We wrap our code inside a `try` block.  
+- This helps us catch errors, such as entering non-numeric values, instead of crashing the program.  
+- This contributes to **Requirement 6: Use Selection Structures to Code Logic and Algorithms**.  
+
+---
+### Taking the inputs from user 
+#### **5. Getting the first number from the user**  
+```python
+num1_input = input("Enter first number or type 'exit' to quit: ").strip()
+```
+- The user is prompted to enter a number or type "exit" to quit.  
+- We use `.strip()` to remove extra spaces, ensuring cleaner input handling.  
+- This satisfies **Requirement 10: Perform String Manipulation**.  
 
 ---
 
-4. **Program Library Functions**
-   - **Code**:
-     ```python
-     with open("calc_history.txt", "a") as file:
-         file.write(f"{num1} {oper} {num2} = {result:.2f}\n")
-     ```
-     - I’ve used the `open()` function from Python's built-in libraries to write the calculation results to a file. This is a simple example of utilizing library functions. While I didn’t need any complex libraries, I did use the `open()` function to handle file I/O, which is a standard library function.
+#### **6. Handling exit condition**  
+```python
+if num1_input.lower() == "exit":
+    print("Exiting calculator...")
+    break
+```
+- If the user types "exit", we convert it to lowercase using `.lower()` to handle case variations.  
+- We then **break** out of the loop, stopping the program.  
+- This is an example of **Requirement 6: Use Selection Structures**.  
 
 ---
 
-5. **Sequence Structures to Code Logic and Algorithms**
-   - **Code**:
-     ```python
-     num1 = int(input("Choose a number: "))
-     num2 = int(input("Choose another number: "))
-     oper = input("Choose an operator (+, -, *, /) or 'exit' to finish: ")
-     if oper == "+":
-         print(num1 + num2)
-     elif oper == "-":
-         print(num1 - num2)
-     ```
-     - The program runs in a clear sequence. First, it asks the user for input. Then, it checks what operator the user wants to use and performs the corresponding operation. Each part of the program is executed in order, and everything is straightforward.
+#### **7. Converting user input to an integer**  
+```python
+num1 = int(num1_input)
+```
+- The input is converted from a string to an integer using `int()`.  
+- This demonstrates **Requirement 2: Use Data Types, Operators, and Expressions**.  
+
+#### **8. Getting the Second number from the user**  block is the same as first one.
+
+---
+#### **9. Asking the user for an operator**  
+```python
+oper = input("Choose an operator (+, -, *, /, ** for power) or type 'exit' to quit: ").strip()
+```
+- The user is prompted to choose an arithmetic operator.  
+- Using `.strip()` ensures clean input.  
+- This is another example of **Requirement 10: Perform String Manipulation**.  
 
 ---
 
-6. **Selection Structures to Code Logic and Algorithms**
-   - **Code**:
-     ```python
-     if oper == "+":
-         print(num1 + num2)
-     elif oper == "-":
-         print(num1 - num2)
-     elif oper == "*":
-         print(num1 * num2)
-     elif oper == "/":
-         print(num1 / num2)
-     ```
-     - The `if-elif` structure handles decision-making in the program. It checks which operator the user wants to use, and based on that, it performs the correct arithmetic operation. If the operator is invalid, it lets the user know and continues.
+#### **10. Handling exit condition for the operator**  
+```python
+if oper.lower() == "exit":
+    print("Exiting calculator...")
+    break
+```
+- If the user enters "exit", we terminate the program.  
+- This satisfies **Requirement 6: Use Selection Structures**.  
 
 ---
 
-7. **Loop Structures to Code Logic and Algorithms**
-   - **Code**:
-     ```python
-     while True:
-         ...
-         if oper.lower() == "exit":
-             break
-     ```
-     - The program uses a `while True:` loop to keep asking the user for input until they type "exit". This is a continuous loop that allows the user to perform multiple calculations without restarting the program.
+#### **11. Validating the operator input**  
+```python
+if oper not in ["+", "-", "*", "/", "**"]:
+    print("Invalid operator. Please enter +, -, *, /, or ** for power.")
+    continue
+```
+- We check whether the user entered a valid operator.  
+- If the input is invalid, we display an error message and restart the loop.  
+- This is a classic example of **Requirement 6: Use Selection Structures**.  
 
 ---
 
-8. **Array Data Structures**
-   - **Code**:
-     ```python
-     history.append(f"{num1} {oper} {num2} = {result:.2f}")
-     ```
-     - The program stores each calculation in a list called `history`. This allows us to keep track of all the calculations that have been made. It’s a simple but effective way to manage data in an array-like structure.
+#### **12. Performing the calculation**  
+```python
+if oper == "+":
+    result = num1 + num2
+elif oper == "-":
+    result = num1 - num2
+elif oper == "*":
+    result = num1 * num2
+elif oper == "/":
+    if num2 == 0:
+        print("Error: Division by zero is not allowed.")
+        continue
+    result = num1 / num2
+elif oper == "**":
+    result = math.pow(num1, num2)
+```
+- Here, we use **if-elif-else** statements to determine the correct operation.  
+- The `math.pow()` function is used for exponentiation, showcasing **Requirement 4: Use Program Library Functions**.  
+- This entire block satisfies **Requirement 6: Use Selection Structures**.  
 
 ---
 
-9. **File Handling (Read and Write)**
-   - **Code**:
-     ```python
-     with open("calc_history.txt", "a") as file:
-         file.write(f"{num1} {oper} {num2} = {result:.2f}\n")
-     ```
-     - This section of the code writes the result of each calculation to a file called `calc_history.txt`. Using `open()` in append mode (`"a"`) ensures that each new result is added to the end of the file without overwriting the previous calculations.
+#### **13. Formatting the result string**  
+```python
+result_str = f"{num1} {oper} {num2} = {result:.2f}"
+```
+- We use an **f-string** to format the result and display it with two decimal places.  
+- This is an example of **Requirement 2: Use Data Types, Operators, and Expressions**.  
 
 ---
 
-10. **String Manipulation**
-    - **Code**:
-      ```python
-      result_str = f"{num1} {oper} {num2} = {result:.2f}"
-      ```
-      - Here, I’m manipulating strings by formatting the result of the calculation into a readable format. The use of an f-string helps combine the variables `num1`, `num2`, `oper`, and `result` into a clear and concise message that shows the calculation.
+#### **14. Modifying the result string**  
+```python
+fun_result = result_str.replace("=", "=>")
+print(f"{fun_result} (changed from '=' to '=>')")
+```
+- We use `.replace()` to modify the output format.  
+- This is an example of **Requirement 10: Perform String Manipulation**.  
 
 ---
 
-11. **Comment the Code**
-    - **Code**:
-      ```python
-      # Get input from the user
-      # Perform the chosen operation
-      # Write the result to a file
-      ```
-      - I’ve added comments throughout the code to explain each major section. These comments provide clarity for anyone reading the code and help explain the purpose of each block (e.g., asking for input, performing calculations, and writing to a file).
+#### **15. Extracting part of the result using slicing**  
+```python
+print(f"result is :{result_str[7:]}")
+```
+- We extract and display only the numerical result using slicing. 
+- This is another example of **Requirement 10: Perform String Manipulation**.  
 
 ---
 
-By following this explanation, you can show how each part of the code meets the specific requirements. It helps break things down into simpler steps while maintaining a conversational and understandable tone for your team!
+#### **16. Storing the result in a list**  
+```python
+history.append(result_str)
+```
+- The calculated result is added to our history list.  
+- This satisfies **Requirement 8: Use Array Data Structures**.  
+
+---
+
+#### **17. Writing the result to a file**  
+```python
+with open("calc_history.txt", "a") as file:
+    file.write(result_str + "\n")
+```
+- The result is saved to a file in append mode.  
+- This demonstrates **Requirement 9: Perform File Handling (Read and Write)**.  
+
+---
+
+#### **18. Handling non-numeric input errors**  
+```python
+except ValueError:
+    print("Invalid input. Please enter numeric values.")
+```
+- If the user enters non-numeric input, the program displays an error message instead of crashing.  
+- This is an example of **Requirement 6: Use Selection Structures**.  
+
+---
+
+### **Conclusion**  
+This calculator program is a great example of how fundamental programming concepts come together. It uses loops, conditions, functions, data structures, and file handling to create a simple yet functional tool. Thanks for listening!  
