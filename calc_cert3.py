@@ -58,16 +58,19 @@ while True:
         # 2. Use Data Types, Operators, and Expressions: Format the result as a string with two decimal places.
         result_str = f"{num1} {oper} {num2} = {result:.2f}"
         print(result_str)
+        # print(len(result_str))
 
         # 10. Perform String Manipulation
         # Print the modified result with '=>'
         fun_result = result_str.replace("=", "=>")
-        print(f"{fun_result} (changed from '=' to '=>')")
+        # print(f"{fun_result} (changed from '=' to '=>')")
 
         # 10. Perform String Manipulation
         # Slicing: only print result part
-        print(f"result is :{result_str[7:]} ")
-         
+        # print(len(result_str))
+        # print(f"result is :{result_str[8]} ")
+        # print(f"result is :{result_str.split('=')[1].strip()} ")
+
 
         # 8. Use Array Data Structures: Store the result in the 'history' list.
         history.append(result_str)
