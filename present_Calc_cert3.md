@@ -4,17 +4,17 @@
 
 Today, I’ll walk you through a calculator program, explaining how each line of code meets key programming requirements. Let’s go step by step.  
 
->> Here's how this program works
->> 1. The user enters two numbers and selects an operator (`+`, `-`, `*`, `/`, `**`).
->>  2. The program checks if the inputs are valid and then performs the selected operation.
->>  3. The result is displayed on the screen, with some string manipulation for formatting.
->>  4. The calculation result is stored in the `history` list and written to the `calc_history.txt` file.
->>  5. If the user types `"exit"`, the program terminates.
+> Here's how this program works
+> 1. The user enters two numbers and selects an operator (`+`, `-`, `*`, `/`, `**`).
+> 2. The program checks if the inputs are valid and then performs the selected operation.
+> 3. The result is displayed on the screen, with some string manipulation for formatting.
+> 4. The calculation result is stored in the `history` list and written to the `calc_history.txt` file.
+> 5. If the user types `"exit"`, the program terminates.
 
 
 ---
 
-### 1. **Basic Language Syntax Rules**
+### 1. Basic Language Syntax Rules**
  
 - Generally, I’ve properly declared the variables `num1`, `num2`, and `oper`. I used the correct syntax and made sure the variables are clear and descriptive. The input is also converted to integers using `int()`, which is good practice for number input. I’ve used indentation correctly, and everything is case-sensitive as expected in Python.
 
@@ -24,8 +24,10 @@ Today, I’ll walk you through a calculator program, explaining how each line of
 import math
 ```
 - First, I import the **math library**.  
-- This allows us to use built-in mathematical functions, like `math.pow()`, to perform exponentiation. Although this program only supports basic operations and exponentiation, you can use this math library to perform square roots, rounding up, down, truncated values, factorials, trigonometric functions, and logarithmic calculations.
-- This satisfies **Requirement 4: Use Program Library Functions**.  
+- This allows us to use built-in mathematical functions, like `math.pow()`, to perform exponentiation. Although this program supports basic arithematic operations and exponentiation only, you can use this math library to perform complex calculations
+
+- ~~(square roots, rounding up, down, truncated values, factorials, trigonometric functions, and logarithmic calculations)~~
+- ~~This satisfies Requirement 4: Use Program Library Functions.~~
 
 ---
 
@@ -35,7 +37,8 @@ history = []
 ```
 - Here, we **initialize an empty list called `history`**.  
 - This will store previous calculations so it can be retrieved later if needed.  
-- Since lists (or arrays) allow us to store multiple values, this fulfills **Requirement 8: Use Array Data Structures**.  
+
+- ~~Since lists (or arrays) allow us to store multiple values,this fulfills Requirement 8: Use Array Data Structures.~~  
 
 ---
 
@@ -43,19 +46,27 @@ history = []
 ```python
 while True:
 ```
-- We enter a **while loop** to keep the calculator running until the user decides to exit.  
-- This satisfies **Requirement 7: Use Loop Structures to Code Logic and Algorithms**.  
+- We enter a **while loop** to keep the calculator running until the user decides to exit.
+  
+- ~~This satisfies Requirement 7: Use Loop Structures to Code Logic and Algorithms.~~  
 ---
 
 #### **4. Handling user input with exception handling**  
 ```python
 try:
 ```
-- We wrap our code inside a `try` block.  
+- I wrapped the code inside a `try` block.  
 - This helps us catch errors, such as entering non-numeric values, instead of crashing the program.  
-- This contributes to **Requirement 6: Use Selection Structures to Code Logic and Algorithms**.  
+- ~~This contributes to Requirement 6: Use Selection Structures to Code Logic and Algorithms.~~  
 
 ---
+### As I explained before this program takes 3 user inputs which are 2 numbers and 1 operator.
+### for the two numbers, taking the input and converting it to integer
+### and for the operator, taking the input and check if the input is valid in Selection of operator
+### strip() method removes any space from input
+### and I included the selection stucture of Handling 'exit' condition. whenever user want to exit the program, they can simply type the "exit", and the program will terminate. To account for the cases user enters uppercase letters, input is converted to lowercase.
+---
+
 ### Taking the inputs from user 
 #### **5. Getting the first number from the user**  
 ```python
@@ -63,7 +74,7 @@ num1_input = input("Enter first number or type 'exit' to quit: ").strip()
 ```
 - The user is prompted to enter a number or type "exit" to quit.  
 - We use `.strip()` to remove extra spaces, ensuring cleaner input handling.  
-- This satisfies **Requirement 10: Perform String Manipulation**.  
+- ~~This satisfies Requirement 10: Perform String Manipulation.~~  
 
 ---
 
@@ -75,54 +86,43 @@ if num1_input.lower() == "exit":
 ```
 - If the user types "exit", we convert it to lowercase using `.lower()` to handle case variations.  
 - We then **break** out of the loop, stopping the program.  
-- This is an example of **Requirement 6: Use Selection Structures**.  
+- ~~This is an example of Requirement 6: Use Selection Structures.~~  
 
 ---
 
-#### **7. Converting user input to an integer**  
+#### 7. Converting user input to an integer**  
 ```python
 num1 = int(num1_input)
 ```
 - The input is converted from a string to an integer using `int()`.  
-- This demonstrates **Requirement 2: Use Data Types, Operators, and Expressions**.  
+- ~~This demonstrates Requirement 2: Use Data Types, Operators, and Expressions.~~  
 
-#### **8. Getting the Second number from the user**  block is the same as first one.
+#### 8. Getting the Second number from the user**  block is the same as first one.
 
 ---
-#### **9. Asking the user for an operator**  
+#### 9. Asking the user for an operator 
 ```python
 oper = input("Choose an operator (+, -, *, /, ** for power) or type 'exit' to quit: ").strip()
 ```
 - The user is prompted to choose an arithmetic operator.  
 - Using `.strip()` ensures clean input.  
-- This is another example of **Requirement 10: Perform String Manipulation**.  
+- ~~This is another example of Requirement 10: Perform String Manipulation.~~  
 
 ---
 
-#### **10. Handling exit condition for the operator**  
-```python
-if oper.lower() == "exit":
-    print("Exiting calculator...")
-    break
-```
-- If the user enters "exit", we terminate the program.  
-- This satisfies **Requirement 6: Use Selection Structures**.  
-
----
-
-#### **11. Validating the operator input**  
+#### 11. Validating the operator input**  
 ```python
 if oper not in ["+", "-", "*", "/", "**"]:
     print("Invalid operator. Please enter +, -, *, /, or ** for power.")
     continue
 ```
-- We check whether the user entered a valid operator.  
-- If the input is invalid, we display an error message and restart the loop.  
-- This is a classic example of **Requirement 6: Use Selection Structures**.  
+- it check whether the user entered a valid operator.  
+- **If the input is invalid, it display an error message and restart the loop.**  
+- ~~This is a classic example of Requirement 6: Use Selection Structures.~~
 
 ---
 
-#### **12. Performing the calculation**  
+#### 12. Performing the calculation**  
 ```python
 if oper == "+":
     result = num1 + num2
@@ -139,8 +139,10 @@ elif oper == "**":
     result = math.pow(num1, num2)
 ```
 - Here, we use **if-elif-else** statements to determine the correct operation.  
-- The `math.pow()` function is used for exponentiation, showcasing **Requirement 4: Use Program Library Functions**.  
-- This entire block satisfies **Requirement 6: Use Selection Structures**.  
+- The `math.pow()` function is used for exponentiation,
+
+- ~~showcasing Requirement 4: Use Program Library Functions.~~  
+- ~~This entire block satisfies Requirement 6: Use Selection Structures.~~  
 
 ---
 
@@ -148,8 +150,9 @@ elif oper == "**":
 ```python
 result_str = f"{num1} {oper} {num2} = {result:.2f}"
 ```
-- We use an **f-string** to format the result and display it with two decimal places.  
-- This is an example of **Requirement 2: Use Data Types, Operators, and Expressions**.  
+- We use an **f-string** to format the result and display it with two decimal places.
+  
+- ~~This is an example of Requirement 2: Use Data Types, Operators, and Expressions~~.  
 
 ---
 
@@ -159,16 +162,22 @@ fun_result = result_str.replace("=", "=>")
 print(f"{fun_result} (changed from '=' to '=>')")
 ```
 - We use `.replace()` to modify the output format.  
-- This is an example of **Requirement 10: Perform String Manipulation**.  
+- ~~This is an example of Requirement 10: Perform String Manipulation.~~  
 
 ---
 
 #### **15. Extracting part of the result using slicing**  
 ```python
-print(f"result is :{result_str[7:]}")
+print(f"result is :{result_str[8]}")
+print(f"result is :{result_str.split('=')[1].strip()} ")
 ```
-- We extract and display only the numerical result using slicing. 
-- This is another example of **Requirement 10: Perform String Manipulation**.  
+- We extract and display only the numerical result using slicing.
+- This splits the string stored in result_str into a list of substrings using the equal sign ('=') as the delimiter.
+result_str.split('=') results in 2 substrings.
+- The index [1]  accesses the second element of the list created by split(), which corresponds to the part of the string after the = sign.
+- Using the previous example, result_str.split('=')[1] would return "value".
+
+- ~~This is another example of **Requirement 10: Perform String Manipulation**.~~  
 
 ---
 
@@ -177,7 +186,7 @@ print(f"result is :{result_str[7:]}")
 history.append(result_str)
 ```
 - The calculated result is added to our history list.  
-- This satisfies **Requirement 8: Use Array Data Structures**.  
+- ~~This satisfies Requirement 8: Use Array Data Structures.~~  
 
 ---
 
@@ -187,7 +196,7 @@ with open("calc_history.txt", "a") as file:
     file.write(result_str + "\n")
 ```
 - The result is saved to a file in append mode.  
-- This demonstrates **Requirement 9: Perform File Handling (Read and Write)**.  
+- ~~This demonstrates Requirement 9: Perform File Handling (Read and Write).~~  
 
 ---
 
@@ -197,7 +206,7 @@ except ValueError:
     print("Invalid input. Please enter numeric values.")
 ```
 - If the user enters non-numeric input, the program displays an error message instead of crashing.  
-- This is an example of **Requirement 6: Use Selection Structures**.  
+- ~~This is an example of Requirement 6: Use Selection Structures~~.  
 
 ---
 
